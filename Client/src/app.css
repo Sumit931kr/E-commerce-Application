@@ -1,0 +1,19 @@
+.App {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    /* margin-top: 10vh; */
+    padding-top: 8vw;
+    /* background-color: transparent; */
+  }
+.margintop{
+margin-top: 60px;
+}
+#sec{
+    display: none;
+}
+#btn{
+    border: 1px solid #4183c4;
+    padding: 2% 15px;
+    margin: 5% 10px;
+}

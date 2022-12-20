@@ -1,0 +1,37 @@
+/* .searchbar{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+} */
+
+.cart{
+    /* margin: 50%; */
+    position: relative;
+    right: 25px;
+    top: 15px;
+
+}
+.cartnumber{
+    position:relative;
+    bottom:65%;
+    color: white
+}
+#lg{
+    margin-right:5vw ;
+}
+.name{
+    background-color: rgb(102, 161, 255);
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-right: 3vh;
+    width: 3vh;
+    height: 3% auto;
+    border-radius: 50%;
+}
+.name>div{
+    position: relative;
+    top: 25%;
+}
