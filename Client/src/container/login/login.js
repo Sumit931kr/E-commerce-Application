@@ -6,7 +6,8 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
 
     const navigate = useNavigate()
-    const url = 'http://localhost:5000'
+    // const url = 'http://localhost:5000'
+    const url = 'https://e-commerce-application-theta.vercel.app'
 
     const [user, setUser] = useState({
         email: "",

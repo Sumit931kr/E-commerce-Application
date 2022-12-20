@@ -9,7 +9,8 @@ const width = window.screen.width;
 
   const navigate = useNavigate();
   const [data, setdata] = useState([])
-  const url = 'http://localhost:5000';
+ // const url = 'http://localhost:5000'
+ const url = 'https://e-commerce-application-theta.vercel.app'
 
   const AllcartItem = async () => {
 

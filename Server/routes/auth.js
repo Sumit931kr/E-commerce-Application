@@ -86,14 +86,17 @@ router.post('/loginUser', [
   try {
     let user = await User.findOne({ email });
     if (!user) {
-      return res.status(400).json({ error: " 81 Please 1 try with Correct Credentials" })
+      return res.status(400).json({ error: " 89 Please 1 try with Correct Credentials" })
     }
 
     // const passwordCompare = await bcrypt.compare(password, user.password)
-    // if (!passwordCompare) {
-    if (! password == user.password) {
+    // if (!passwordCompare) 
+    console.log(user.password);
+    console.log(password);
+    console.log( !password == user.password)
+    if ( password == user.password == false) {
       success = false;
-      return res.status(400).json({ success, error: " 86 Please try with Correct Credentials" })
+      return res.status(400).json({ success, error: " 96 Please try with Correct Credentials" })
     }
 
     const data = {

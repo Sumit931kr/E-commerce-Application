@@ -9,7 +9,8 @@ const Header = () => {
     const dispatch = useDispatch();
     // const [cartnumberr, setcartnumberr] = useState([])
 
-    const url = 'http://localhost:5000'
+    // const url = 'http://localhost:5000'
+    const url = 'https://e-commerce-application-theta.vercel.app'
     const cartnumber = useSelector((state) => state.cart);
     // console.log(cartnumber);
 
@@ -30,7 +31,7 @@ const Header = () => {
 
         // console.log(response.json);
         const json = await response.json();
-        dispatch(cart(json.length));
+        dispatch(cart(json.length / 2));
     }
     
 

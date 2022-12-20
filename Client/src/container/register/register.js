@@ -6,6 +6,9 @@ const Register = () => {
 
     const navigate = useNavigate()
 
+    // const url = 'http://localhost:5000'
+    const url = 'https://e-commerce-application-theta.vercel.app'
+
     const [user, setUser] = useState({
         name: "",
         email: "",
@@ -29,7 +32,7 @@ const Register = () => {
 
         if (name && email && password && (password === reEnterPassword)) {
             try {
-                const resposne = await fetch('http://localhost:5000/auth/createUser', {
+                const resposne = await fetch(`${url}/auth/createUser`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

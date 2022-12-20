@@ -10,7 +10,7 @@ export const cartReducer = (state = initalCount, { type, payload }) => {
   // console.log(number.length)
   switch (type) {
     case ActionTypes.CART:
-      return payload
+      return state+payload
 
     default:
       return state

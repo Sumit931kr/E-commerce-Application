@@ -10,7 +10,8 @@ const ProductDetail = (props) => {
   const dispatch = useDispatch();
 
 
-  const url = 'http://localhost:5000'
+// const url = 'http://localhost:5000'
+const url = 'https://e-commerce-application-theta.vercel.app'
   const product = useSelector((state) => state.product)
 
   // const { id, itemname, description, price, img } = product
