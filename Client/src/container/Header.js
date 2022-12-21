@@ -31,7 +31,7 @@ const Header = () => {
 
         // console.log(response.json);
         const json = await response.json();
-        dispatch(cart(json.length / 2));
+        dispatch(cart(json.length));
     }
     
 
