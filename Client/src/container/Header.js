@@ -69,7 +69,7 @@ const Header = () => {
                     </div>
                 </>
                 :
-                <div style={{"display":"flex"}}>
+                <div style={{display:"flex"}}>
                     <div className='ui button'>
                         <Link to='/login'>Login</Link>
                     </div>
