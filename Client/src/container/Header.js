@@ -32,7 +32,7 @@ const Header = () => {
 
         // console.log(response.json);
         const json = await response.json();
-        dispatch(cart(json.length / 2));
+        dispatch(cart(json.length));
     }
 
     const searchproduct = () => {
@@ -69,7 +69,7 @@ const Header = () => {
                     </div>
                 </>
                 :
-                <div style={{ display: "flex" }}>
+                <div>
                     <div className='ui button'>
                         <Link to='/login'>Login</Link>
                     </div>
