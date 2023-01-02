@@ -44,7 +44,8 @@ cursor: pointer;
 }
 input[type=text]{
     color: black;
-    border: 1px solid red;  
+    border-bottom: 5px solid red;  
+    /* border-style: outset; */
 }
 input[type=password]{
     color: black;

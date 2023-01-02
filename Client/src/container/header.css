@@ -5,6 +5,10 @@
     margin: auto;
 } */
 
+.fixed{
+    z-index: -40;
+}
+
 .cart{
     /* margin: 50%; */
     position: relative;
@@ -18,7 +22,7 @@
     color: white
 }
 #lg{
-    margin-right:5vw ;
+    margin-right:2vw ;
 }
 .name{
     background-color: rgb(102, 161, 255);
@@ -27,11 +31,22 @@
     text-align: center;
     justify-content: center;
     margin-right: 3vh;
-    width: 3vh;
+    width: 5vh;
     height: 3% auto;
     border-radius: 50%;
 }
 .name>div{
     position: relative;
     top: 25%;
+}
+
+.search{
+    width: 20vw;
+}
+
+.search> input{
+border-radius: 20px;
+margin-top:1vh;
+width: 15vw;
+padding: 0.5vh 2vh;
 }

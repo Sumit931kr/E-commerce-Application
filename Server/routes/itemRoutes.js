@@ -101,6 +101,23 @@ router.get('/cartitem',fetchUser, async (req, res) => {
     }
 })
 
+// Search the Product in the database
+
+router.get('/searchitem/:text', async (req, res) => {
+
+    try {
+        var regex = new RegExp(req.params.text, 'i');
+        const result = await Item.find({ itemname: regex });
+        res.json(result)
+
+    } catch (error) {
+        res.json({ message: 'some error occured ' + error })
+        console.log("eror occured here");
+    }
+
+})
+
+
 
 
 export default router;

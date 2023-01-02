@@ -26,11 +26,11 @@
 }
 input[type=text]{
     /* color: red; */
-    border: 1px solid red;  
+    border-bottom: 3px solid red;  
 }
 input[type=password]{
     /* color: red; */
-    border: 1px solid red;  
+    border-bottom: 3px solid red;    
 
 }
 

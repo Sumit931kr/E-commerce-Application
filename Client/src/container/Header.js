@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { cart } from '../redux/actions/productActions'
 import './header.css'
+import Searchbar from './searchbar'
 
 const Header = () => {
 
@@ -33,11 +34,14 @@ const Header = () => {
         const json = await response.json();
         dispatch(cart(json.length / 2));
     }
-    
+
+    const searchproduct = () => {
+        console.log("ll")
+    }
 
 
     useEffect(() => {
-        run();          
+        run();
     }, [])
 
     return (<>
@@ -49,8 +53,9 @@ const Header = () => {
             </div>
             {(localStorage.getItem('itoken')) ?
                 <>
-                <div className='name'>
-                    <div>{localStorage.getItem('name').charAt(0)}</div>
+                    <Searchbar />
+                    <div className='name'>
+                        <div>{localStorage.getItem('name').charAt(0)}</div>
                     </div>
                     <div className='ui button' id='lg' onClick={logout}> LogOut </div>
                     <div className='cart'>
@@ -64,7 +69,7 @@ const Header = () => {
                     </div>
                 </>
                 :
-                <div>
+                <div style={{ display: "flex" }}>
                     <div className='ui button'>
                         <Link to='/login'>Login</Link>
                     </div>

@@ -1,11 +1,11 @@
-import React,{useState} from 'react'
-import './app.css'
+import React from 'react'
 import Header from './container/Header'
 import ProductListing from './container/ProductListing'
 import ProductDetail from './container/ProductDetail'
 import Cartproduct from './container/Cartproduct';
 import Login from './container/login/login';
 import Register from './container/register/register';
+import './app.css'
 
 import {
   BrowserRouter as Router,
@@ -23,12 +23,12 @@ function App() {
       <Router>
           <Header />
         <Routes>
-          <Route path='/' element={<ProductListing/>} />
-          <Route path='/items/:productId' element={<ProductDetail/>} />
-          <Route path='/cartproduct' element={<Cartproduct/>}/>
-          <Route path='/login' element={<Login/>}/>
-          <Route path='/register' element={<Register/>} />
-          <Route path='/checkout' element={<Cartproduct/>}/>
+          <Route path='/' exact element={<ProductListing/>} />
+          <Route path='/items/:productId' exact element={<ProductDetail/>} />
+          <Route path='/cartproduct' exact element={<Cartproduct/>}/>
+          <Route path='/login' exact element={<Login/>}/>
+          <Route path='/register' exact element={<Register/>} />
+          <Route path='/checkout' exact element={<Cartproduct/>}/>
           <Route>404 Not Found</Route>
         </Routes>
       </Router>

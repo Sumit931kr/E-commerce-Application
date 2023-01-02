@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 
 
 const ProductComponent = () => {
+
+  // const {products} = props;
+
   const products = useSelector((state) => state.allProducts.products);
 
 const width = window.screen.width;
@@ -14,7 +17,7 @@ const width = window.screen.width;
     const { _id, itemname, price, img } = product;
     return (
       // <div className="ten wide column" key={_id}>
-       <div className={width>600?"four wide column":"ten wide column"} key={_id}>
+       <div className={width>600?"four wide column":"ten wide column"} key={_id} data-bs-dismiss="modal">
         <Link to={`items/${_id}`}>
         <div className="ui link cards">
           <div className="card">

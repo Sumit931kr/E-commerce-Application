@@ -3,6 +3,7 @@ import express from 'express';
 import jwt from 'jsonwebtoken'
 import {body, validationResult} from 'express-validator'
 import User from '../Modal/userSchema.js'
+import bcrypt from 'bcryptjs'
 
 const router = express.Router()
 
@@ -32,7 +33,10 @@ router.post('/createUser', [
     }
 
     // Making Password  Vauranable
-    const secPass = req.body.password;
+
+   const salt = await bcrypt.genSalt(10);
+
+    const secPass = await bcrypt.hash(req.body.password,salt);
 
 
     // Create a new user
@@ -89,12 +93,11 @@ router.post('/loginUser', [
       return res.status(400).json({ error: " 89 Please 1 try with Correct Credentials" })
     }
 
-    // const passwordCompare = await bcrypt.compare(password, user.password)
+    const passwordCompare = await bcrypt.compare(password, user.password)
     // if (!passwordCompare) 
-    console.log(user.password);
-    console.log(password);
+
     console.log( !password == user.password)
-    if ( password == user.password == false) {
+    if (! passwordCompare ) {
       success = false;
       return res.status(400).json({ success, error: " 96 Please try with Correct Credentials" })
     }
