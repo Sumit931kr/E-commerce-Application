@@ -94,14 +94,13 @@ router.post('/loginUser', [
     }
 
     const passwordCompare = await bcrypt.compare(password, user.password)
-    // if (!passwordCompare) 
 
-    console.log( !password == user.password)
     if (! passwordCompare ) {
       success = false;
       return res.status(400).json({ success, error: " 96 Please try with Correct Credentials" })
     }
 
+    
     const data = {
       user: {
         id: user.id,
