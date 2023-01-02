@@ -10,8 +10,8 @@ function Searchbar() {
     // const {setSome} = props
 
 
-    const url = 'http://localhost:5000'
-    //  const url = 'https://e-commerce-application-theta.vercel.app'
+    // const url = 'http://localhost:5000'
+     const url = 'https://e-commerce-application-theta.vercel.app'
 
     const width = window.screen.width;
 
